@@ -2,10 +2,12 @@
 # Smart Plant Pi Raspberry Pi Software
 # SDL_Pi_SmartPlantPi
 #
-# SwitchDoc Labs July 2017
+# SwitchDoc Labs August 2017
 #
 
 # all SmartPlantPi Documentation on www.switchdoc.com/SmartPlantPi
+
+AUgust 6, 2017:  Added font install in README.md  Thank you lemassykoi!
 
 July 24, 2017:  Release Version 016<BR>
 Fixed DEBUG related issues in interpretRotary and interpretButton
@@ -62,6 +64,8 @@ https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configurin
 sudo apt-get install python-pip<BR>
 
 sudo apt-get install python-pil <BR>
+
+sudo apt-get install fonts-roboto
 
 sudo pip install --upgrade setuptools pip <BR>
 
