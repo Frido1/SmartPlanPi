@@ -7,7 +7,7 @@
 
 # all SmartPlantPi Documentation on www.switchdoc.com/SmartPlantPi
 
-AUgust 6, 2017:  Added font install in README.md  Thank you lemassykoi!
+August 6, 2017:  Added font install in README.md  Thank you lemassykoi!
 
 July 24, 2017:  Release Version 016<BR>
 Fixed DEBUG related issues in interpretRotary and interpretButton
