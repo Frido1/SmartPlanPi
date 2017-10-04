@@ -57,6 +57,8 @@ from apscheduler.schedulers.background import BackgroundScheduler
 
 import apscheduler.events
 
+import csv
+
 # Check for user imports
 try:
             import conflocal as config
@@ -438,8 +440,18 @@ def checkAndWater():
     	    if (state.Moisture_Threshold > state.Moisture_Humidity):
 	    	print "Watering Plant"
             	waterPlant();
-            
+		logFIle();
 
+def logFile():
+	fd =  open('LOG.csv',"w")
+	try:
+		time = datetime.now()
+		moisture = state.Moisture_Humidity
+		data = [ time, moisture ] 
+		writer = csv.writer(fd, dialect='excel')
+		writer.writerow(data)
+	finally:
+		fd.close()
 
 
 def ap_my_listener(event):
@@ -908,11 +920,11 @@ if __name__ == '__main__':
     scheduler.add_job(publishStateToPubNub, 'interval', seconds=10)
 
     # check and water  
-    scheduler.add_job(checkAndWater, 'interval', minutes=15)
+    scheduler.add_job(checkAndWater, 'interval', minutes=30)
 
 	
     # save state to pickle file 
-    scheduler.add_job(saveState, 'interval', minutes=30)
+    scheduler.add_job(saveState, 'interval', minutes=60)
 
 	
 	

@@ -14,8 +14,8 @@ fromAddress = "yourfromaddress@example.com"
 
 # PubNub configuration
 
-Pubnub_Publish_Key = "pub-c-xxxxxx"
-Pubnub_Subscribe_Key = "sub-c-xxxxxx"
+Pubnub_Publish_Key = "pub-c-1c427b13-cc64-41ae-917f-54335c0b2cf9"
+Pubnub_Subscribe_Key = "sub-c-654f5234-7480-11e7-a16d-02ee2ddab7fe"
 
 ###########
 #Alexa Support (currently not released)
