@@ -439,8 +439,9 @@ def checkAndWater():
     else:
     	    if (state.Moisture_Threshold > state.Moisture_Humidity):
 	    	print "Watering Plant"
-            	waterPlant();
-		logFIle();
+            	logFIle();
+		waterPlant();
+		
 
 def logFile():
 	fd =  open('LOG.csv',"w")
@@ -920,7 +921,7 @@ if __name__ == '__main__':
     scheduler.add_job(publishStateToPubNub, 'interval', seconds=10)
 
     # check and water  
-    scheduler.add_job(checkAndWater, 'interval', minutes=30)
+    scheduler.add_job(checkAndWater, 'interval', minutes=5)
 
 	
     # save state to pickle file 
