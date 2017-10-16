@@ -439,7 +439,7 @@ def checkAndWater():
     else:
     	    if (state.Moisture_Threshold > state.Moisture_Humidity):
 	    	print "Watering Plant"
-            	logFIle();
+            	logFile();
 		waterPlant();
 		
 
