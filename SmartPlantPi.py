@@ -444,7 +444,7 @@ def checkAndWater():
 		
 
 def logFile():
-	fd =  open('LOG.csv',"w")
+	fd =  open('LOG.csv',"a")
 	try:
 		time = datetime.now()
 		moisture = state.Moisture_Humidity
